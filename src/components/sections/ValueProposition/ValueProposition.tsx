@@ -1,5 +1,6 @@
 import React from 'react';
 import './ValueProposition.css';
+import { SectionTitle } from '../../ui/SectionTitle/SectionTitle';
 
 interface ValuePropositionProps {
     title?: string;
@@ -16,7 +17,7 @@ export const ValueProposition: React.FC<ValuePropositionProps> = ({
         <section className="value-section">
             <div className="value-container">
                 <div className="value-content">
-                    <h2 className="value-title">{title}</h2>
+                    <SectionTitle>{title}</SectionTitle>
                     <p className="value-description">{description}</p>
                 </div>
                 <div className="value-images">

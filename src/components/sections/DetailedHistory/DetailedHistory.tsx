@@ -1,16 +1,12 @@
 import React from 'react';
 import { SectionTitle } from '../../ui/SectionTitle/SectionTitle';
-import { VerticalLine } from '../../ui/VerticalLine/VerticalLine';
 import './DetailedHistory.css';
 
 export const DetailedHistory: React.FC = () => {
   return (
     <section className="detailed-history-section">
       <div className="detailed-history-container">
-        <div className="detailed-history-title-wrapper">
-          <VerticalLine />
-          <SectionTitle>Nossa história</SectionTitle>
-        </div>
+        <SectionTitle className="mb-8">Nossa história</SectionTitle>
         
         <p className="detailed-history-intro">
           Nossa jornada é um testemunho de evolução, aprendizado e conquistas, moldando a maneira

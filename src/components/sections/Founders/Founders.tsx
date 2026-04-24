@@ -1,6 +1,5 @@
 import React from 'react';
 import { SectionTitle } from '../../ui/SectionTitle/SectionTitle';
-import { VerticalLine } from '../../ui/VerticalLine/VerticalLine';
 import './Founders.css';
 
 const FOUNDERS = [
@@ -25,10 +24,7 @@ export const Founders: React.FC = () => {
   return (
     <section className="founders-section">
       <div className="founders-container">
-        <div className="founders-title-wrapper">
-          <VerticalLine />
-          <SectionTitle>Sócios Fundadores Carmel Capital</SectionTitle>
-        </div>
+        <SectionTitle className="mb-16">Sócios Fundadores Carmel Capital</SectionTitle>
 
         <div className="founders-grid">
           {FOUNDERS.map((founder, idx) => (

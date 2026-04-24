@@ -17,14 +17,22 @@ export const InvestorCTA: React.FC<InvestorCTAProps> = ({
 }) => {
     return (
         <section className="investor-cta-section">
+            {/* background */}
+            <img
+                src={imageSrc}
+                alt=""
+                className="investor-cta-bg"
+            />
+
+            {/* overlay gradiente */}
+            <div className="investor-cta-overlay" />
+
+            {/* conteúdo */}
             <div className="investor-cta-container">
-                <div className="investor-cta-image-wrapper">
-                    <img src={imageSrc} alt="Seja um investidor" className="investor-cta-image" />
-                </div>
                 <div className="investor-cta-content">
-                    <h2 className="investor-cta-title">{title}</h2>
-                    <p className="investor-cta-description">{description}</p>
-                    <Button variant="primary" size="lg" onClick={onSchedule}>
+                    <h2 className="investor-cta-title ml-2">{title}</h2>
+                    <p className="investor-cta-description ml-10">{description}</p>
+                    <Button variant="green-inverted" size="lg" onClick={onSchedule} className="ml-10">
                         Agende uma conversa
                     </Button>
                 </div>

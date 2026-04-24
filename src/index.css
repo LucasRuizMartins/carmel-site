@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary-color: #179D6A;
+    --primary-dark: #0F4631;
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -36,8 +41,12 @@
     border-color: #b8963e;
   }
 
+  .text-primary {
+    color: var(--primary-color);
+  }
+
   .primary-h1 {
-    color: #0F4631;
+    color: var(--primary-dark);
   }
 }
 

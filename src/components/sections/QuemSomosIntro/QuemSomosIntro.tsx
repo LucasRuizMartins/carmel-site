@@ -7,10 +7,7 @@ export const QuemSomosIntro: React.FC = () => {
     <section className="quem-somos-intro-section">
       {/* 1. O Banner Superior (Título e Descrição do Banner) */}
       <div className="quem-somos-intro-container-top-banner">
-        <div className="quem-somos-intro-title-wrapper">
-          <VerticalLine className="h-12 lg:h-16" />
-          <SectionTitle className='py-10'>Quem somos</SectionTitle>
-        </div>
+        <SectionTitle light className='py-10'>Quem somos</SectionTitle>
         <p className="quem-somos-intro-description-banner">
           Carmel Capital - Sócios com mais de 30 anos de <br className="hidden md:block" />
           experiência no Mercado Financeiro.

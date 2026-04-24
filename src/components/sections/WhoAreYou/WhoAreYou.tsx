@@ -46,7 +46,7 @@ export const WhoAreYou: React.FC = () => {
       <div className="who-container">
         {/* Wrapper do título centralizado */}
         <div className="who-title-wrapper">
-          <VerticalLine />
+
           <SectionTitle>Quem é você?</SectionTitle>
         </div>
 

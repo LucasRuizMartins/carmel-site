@@ -37,28 +37,21 @@ const VALUE_IMAGES = [
 export const InvestidoresPage: React.FC = () => {
     return (
         <>
-
-
             <PageHero
                 title="Sou investidor"
                 subtitle="Investidores qualificados que buscam fundos de investimentos fora do portfólio tradicional oferecido pelas grandes instituições financeiras."
                 imageSrc="https://carmelcapital.com.br/imagens/investidores/banner-sem-gradient.png"
             />
-
             <ValueProposition
                 description="Com mais de 30 anos de experiência no mercado financeiro brasileiro, a Carmel Capital oferece aos seus clientes soluções diferenciadas por meio de fundos de investimentos e operações estruturadas, tais como, otimização tributária, redução de custo financeiro, fidelização de fornecedores, melhoria de fluxo de caixa, antecipações de tendências além do amplo relacionamento com agentes do mercado. Tudo isso, em uma casa experiente, que conta com a criação de mais de 400 fundos de investimentos e operações estruturadas."
                 images={VALUE_IMAGES}
             />
-
             <Differentials
                 subtitle="Os sócios possuem um sólido relacionamento com os agentes do mercado financeiro, mais de 30 anos de experiência no mercado financeiro e mais de 400 fundos de investimentos e operações estruturadas."
                 items={DIFFERENTIALS}
             />
-
             <Funds />
-
             <Metrics />
-
             <InvestorCTA onSchedule={() => { /* abrir modal */ }} />
 
         </>

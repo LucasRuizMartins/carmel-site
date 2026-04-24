@@ -1,13 +1,15 @@
 .value-section {
-    @apply bg-white py-20 flex justify-center;
+    @apply bg-white py-20 flex justify-center relative;
+    z-index: 10;
 }
 
 .value-container {
-    @apply max-w-[1400px] mx-auto px-6 xl:px-12 w-full flex flex-col md:flex-row items-center gap-12;
+    @apply max-w-[1400px] mx-auto px-6 xl:px-12 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20;
 }
 
+/* Texto na Esquerda */
 .value-content {
-    @apply flex flex-col gap-6 w-full md:w-1/2;
+    @apply flex flex-col gap-6 w-full lg:w-1/2 order-2 lg:order-1 mt-10 lg:mt-0;
 }
 
 .value-title {
@@ -15,13 +17,50 @@
 }
 
 .value-description {
-    @apply text-gray-500 text-base leading-relaxed;
+    @apply text-gray-500 text-base lg:text-lg leading-relaxed;
 }
 
+/* Imagens na Direita */
 .value-images {
-    @apply w-full md:w-1/2 flex flex-col gap-4;
+    @apply w-full lg:w-1/2 relative h-[400px] lg:h-[500px] order-1 lg:order-2;
 }
 
 .value-image {
-    @apply w-full h-auto rounded-2xl object-cover;
+    @apply absolute rounded-2xl object-cover shadow-2xl;
+    object-position: top;
+}
+
+/* Imagem 1 (Principal/Fundo) - Invade a section anterior no desktop */
+.value-image:nth-child(1) {
+    @apply w-[75%] h-[85%];
+    top: -120px;
+    /* Invade a section de cima */
+    right: 0;
+    z-index: 10;
+}
+
+/* Imagem 2 (Sobreposta) */
+.value-image:nth-child(2) {
+    @apply w-[70%] h-[50%];
+    bottom: 40px;
+    left: 0;
+    z-index: 20;
+    border: 2px solid white;
+    /* Moldura branca para destacar a sobreposição */
+}
+
+/* Opcional: Imagem 3 */
+.value-image:nth-child(3) {
+    @apply w-[40%];
+    bottom: -40px;
+    right: 10%;
+    z-index: 30;
+}
+
+@media (max-width: 1024px) {
+    .value-image:nth-child(2) {
+        @apply w-[50%] h-[70%];
+        left: 50px;
+        bottom: 50px;
+    }
 }

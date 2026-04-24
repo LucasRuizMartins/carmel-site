@@ -1,27 +1,46 @@
 .investor-cta-section {
-    @apply bg-white py-20 flex justify-center;
+    @apply relative h-[500px] w-full overflow-hidden;
 }
 
+/* IMAGEM FUNDO */
+.investor-cta-bg {
+    @apply absolute inset-0 w-full h-full object-cover;
+}
+
+/* OVERLAY COM GRADIENTE (igual ao print) */
+.investor-cta-overlay {
+    @apply absolute inset-0;
+    background: linear-gradient(to right,
+            rgba(10, 20, 40, 0.85) 0%,
+            rgba(10, 20, 40, 0.6) 40%,
+            rgba(10, 20, 40, 0.2) 70%,
+            rgba(10, 20, 40, 0.9) 100%);
+}
+
+/* CONTAINER */
 .investor-cta-container {
-    @apply max-w-[1400px] mx-auto px-6 xl:px-12 w-full flex flex-col md:flex-row items-center gap-12;
+    @apply relative z-10 h-full max-w-[1400px] mx-auto px-6 xl:px-12 flex justify-end items-center;
 }
 
-.investor-cta-image-wrapper {
-    @apply w-full md:w-1/2 flex-shrink-0;
-}
-
-.investor-cta-image {
-    @apply w-full h-auto object-cover rounded-2xl;
-}
-
+/* CONTEÚDO À DIREITA */
 .investor-cta-content {
-    @apply flex flex-col items-start gap-6 w-full md:w-1/2;
+    /* Mobile: Largura total (sem limite de 450px) */
+    @apply w-full flex flex-col gap-6 items-start;
+    /* Desktop (lg = 1024px ou md = 768px): Aplica o limite */
+    @apply max-w-[400px];
+    @apply lg:max-w-[650px];
 }
 
+/* TIPOGRAFIA */
 .investor-cta-title {
-    @apply text-3xl md:text-4xl font-bold text-navy leading-tight;
+    @apply text-4xl md:text-5xl font-bold text-white;
 }
 
 .investor-cta-description {
-    @apply text-gray-500 text-base leading-relaxed;
+    @apply text-white/80 text-lg;
+}
+
+.investor-cta-title::before {
+    content: '';
+    @apply inline-block w-1 h-8 bg-green-500 mr-3 align-middle;
 }
