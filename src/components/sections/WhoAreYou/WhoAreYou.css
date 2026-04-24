@@ -1,76 +1,108 @@
 /* WhoAreYou Component Styles */
 
 .who-section {
-  @apply bg-light-gray py-24;
+  @apply bg-light-gray py-24 flex flex-col items-center;
 }
 
 .who-container {
-  @apply max-w-[1600px] mx-auto px-6 xl:px-12;
+  @apply max-w-[1600px] mx-auto px-6 xl:px-12 w-full flex flex-col items-center;
 }
 
 .who-title-wrapper {
-  @apply flex items-stretch justify-center gap-4 mb-12;
+  /* items-center centraliza a linha e o texto verticalmente entre si */
+  /* justify-center centraliza o conjunto no meio da tela */
+  @apply flex items-center justify-center gap-4 mb-8 w-full;
 }
 
 .who-description {
-  @apply text-gray-600 text-base leading-relaxed max-w-2xl mb-12;
+  /* mx-auto e text-center são fundamentais aqui */
+  @apply text-gray-600 text-base lg:text-lg leading-relaxed max-w-3xl mb-16 text-center mx-auto;
 }
 
 .who-grid {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  /* justify-items-center garante que os cards fiquem no meio se o grid não ocupar 100% */
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-12 justify-items-center w-full;
 }
 
 .profile-card {
-  @apply min-h-[900px] lg:min-h-[600px];
+  @apply min-h-[auto] lg:min-h-[600px];
   @apply flex flex-col lg:flex-row items-center gap-5 lg:gap-10 bg-white p-6 lg:p-5 w-full max-w-6xl border border-[#179D6A] rounded-[40px] lg:rounded-[160px] text-center lg:text-left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Garante que o toque no card seja registrado */
+  touch-action: pan-y;
 }
 
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(15, 89, 67, 0.15);
+}
+
+/* CONTAINER DA IMAGEM */
 .profile-card-img-wrapper {
-  @apply flex-shrink-0 w-full lg:w-auto flex justify-center;
+  @apply relative flex-shrink-0 flex justify-center overflow-hidden;
+  @apply w-fit mx-auto lg:mx-0;
+  border-radius: 20px;
+  /* Impede que o overlay bloqueie o scroll do dedo */
+  pointer-events: auto;
 }
 
-.profile-card-img {
-  /* CELULAR (Mobile First) */
-  /* Troque o w-full ou o max-w para o tamanho que desejar no celular */
-  @apply w-[90%] max-w-[700px] h-[800px] mx-auto;
-  /* TABLET (md) */
-  /* Adicione o prefixo md: para mudar apenas em tablets */
-  @apply md:w-[700px] md:h-[800px];
-  /* DESKTOP (lg) */
-  @apply lg:w-[240px] lg:h-[600px] lg:max-w-none;
+@media (min-width: 1024px) {
+  .profile-card-img-wrapper {
+    border-radius: 180px;
+  }
+}
 
-  /* Estilos Comuns */
+/* OVERLAY (Efeito de baixo para cima) */
+.profile-card-img-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #179D6A;
+  opacity: 0.6;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: inherit;
+  /* CRÍTICO: Permite que o toque passe através do overlay para não "travar" o dedo */
+  pointer-events: none;
+}
+
+/* Ativa o hover tanto no mouse quanto no toque (active) */
+.profile-card:hover .profile-card-img-wrapper::after,
+.profile-card:active .profile-card-img-wrapper::after {
+  transform: translateY(0);
+}
+
+/* IMAGEM */
+.profile-card-img {
+  @apply w-full max-w-[90vw] md:max-w-[700px] h-[500px] md:h-[800px];
+  @apply lg:w-[240px] lg:h-[600px] lg:max-w-none;
   @apply object-cover rounded-[20px] lg:rounded-[180px];
+  /* Evita que o navegador tente "arrastar" a imagem física */
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .profile-card-body {
-  @apply flex-1 flex flex-col items-center lg:items-start justify-center py-4;
+  @apply flex-1 flex flex-col items-center lg:items-start justify-center py-6;
 }
 
 .profile-card-title-wrapper {
-  @apply flex items-center justify-center lg:justify-start gap-3 mb-6 w-full;
+  @apply flex items-center justify-center lg:justify-start gap-3 mb-4 w-full;
 }
 
 .profile-card-title {
-  @apply text-3xl lg:text-4xl font-bold m-0;
+  @apply text-2xl lg:text-4xl font-bold m-0 text-navy;
 }
 
 .profile-card-text {
-  /* text-lg no mobile, volta para text-base no desktop (ou mantenha lg:text-lg) */
-  @apply p-10;
-  @apply text-gray-500 text-[20px] lg:text-base leading-relaxed mb-10 line-clamp-6;
-}
-
-.profile-card-actions {
-  /* container for button */
+  @apply px-4 lg:px-0 text-gray-500 text-[16px] lg:text-base leading-relaxed mb-8 line-clamp-6;
 }
 
 .profile-card-btn {
   @apply !rounded-tl-none !rounded-tr-full !rounded-br-full !rounded-bl-full;
-  @apply min-h-[80px] lg:min-h-[80px];
-  @apply min-w-[200px] lg:min-w-[200px];
-  @apply !border-[#179D6A] !text-[#179D6A] !normal-case tracking-normal px-12 py-5;
-  font-size: 20px;
+  @apply min-h-[60px] min-w-[180px] lg:min-w-[200px];
+  @apply !border-[#179D6A] !text-[#179D6A] !normal-case tracking-normal px-10;
+  font-size: 18px;
   transition: all 0.3s ease;
 }
 

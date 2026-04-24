@@ -1,4 +1,6 @@
-/* Header Component Styles */
+/* =========================================
+   Header Component Styles
+   ========================================= */
 
 .header {
   @apply fixed top-0 left-0 right-0 z-40 transition-all duration-300;
@@ -20,7 +22,9 @@
   @apply h-10 object-contain;
 }
 
-/* Desktop Nav */
+/* =========================================
+   Desktop Nav
+   ========================================= */
 .header-nav {
   @apply hidden lg:flex items-center gap-6;
 }
@@ -29,28 +33,103 @@
   @apply text-white text-sm font-medium tracking-wide hover:text-gold transition-colors duration-200;
 }
 
-/* Mobile Hamburger */
+.header-nav-link--active {
+  color: #179D6A;
+  font-weight: 700;
+}
+
+/* =========================================
+   Mobile Hamburger Button (leaf style)
+   rounded-tl-none, others rounded
+   ========================================= */
 .header-hamburger {
-  @apply lg:hidden text-white p-2;
+  @apply lg:hidden flex flex-col justify-center items-center gap-[5px]
+         w-12 h-12 bg-[#179D6A] z-50 cursor-pointer border-none;
+  /* Leaf shape: top-left corner is sharp, rest rounded */
+  border-radius: 0 16px 16px 16px;
+  transition: background-color 0.3s ease;
 }
 
-.header-hamburger-line {
-  @apply block w-6 h-0.5 bg-white mb-1;
+.header-hamburger:hover {
+  background-color: #0F5943;
 }
 
-.header-hamburger-line--last {
-  @apply block w-6 h-0.5 bg-white;
+.header-hamburger-bar {
+  @apply block w-6 h-[2px] bg-white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
 }
 
-/* Mobile Menu */
-.header-mobile-menu {
-  @apply lg:hidden bg-navy border-t border-white/10;
+/* Animate bars when open → X icon */
+.header-hamburger-bar--top-open {
+  transform: translateY(7px) rotate(45deg);
 }
 
-.header-mobile-nav {
-  @apply flex flex-col px-6 py-4 gap-4;
+.header-hamburger-bar--mid-open {
+  opacity: 0;
+  transform: scaleX(0);
 }
 
-.header-mobile-link {
-  @apply text-white text-sm font-medium hover:text-gold transition-colors;
+.header-hamburger-bar--bot-open {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================
+   Overlay (dark backdrop)
+   ========================================= */
+.header-overlay {
+  @apply fixed inset-0 bg-black/50 z-30 opacity-0 pointer-events-none;
+  transition: opacity 0.3s ease;
+}
+
+.header-overlay--visible {
+  @apply opacity-100 pointer-events-auto;
+}
+
+/* =========================================
+   Sidebar (slide from left)
+   ========================================= */
+.header-sidebar {
+  @apply fixed inset-y-0 left-0 z-40 w-72 flex flex-col;
+  background-color: rgba(31, 41, 55, 0.97); /* gray-800 opaque */
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-sidebar--open {
+  transform: translateX(0);
+}
+
+/* Sidebar header row */
+.header-sidebar-top {
+  @apply flex items-center justify-between px-6 py-5 border-b border-white/10;
+}
+
+.header-sidebar-logo {
+  @apply h-8 object-contain;
+}
+
+.header-sidebar-close {
+  @apply text-white/60 hover:text-white text-xl leading-none transition-colors cursor-pointer bg-transparent border-none;
+}
+
+/* Sidebar nav links */
+.header-sidebar-nav {
+  @apply flex flex-col flex-1 px-6 py-6 gap-1 overflow-y-auto;
+}
+
+.header-sidebar-link {
+  @apply text-white/80 text-base font-medium py-3 px-4 rounded-lg
+         hover:bg-white/10 hover:text-white transition-all duration-200;
+}
+
+.header-sidebar-link--active {
+  color: #179D6A;
+  font-weight: 700;
+  background-color: rgba(23, 157, 106, 0.1);
+}
+
+/* Sidebar footer with CTA button */
+.header-sidebar-footer {
+  @apply px-6 py-6 border-t border-white/10;
 }
