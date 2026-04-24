@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #1a2744;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: #b8963e;
+  }
+
+  .bg-gold {
+    background-color: #b8963e;
+  }
+
+  .bg-navy {
+    background-color: #1a2744;
+  }
+
+  .border-gold {
+    border-color: #b8963e;
+  }
+
+  .primary-h1 {
+    color: #0F4631;
+  }
+}
+
+
+
+.custom-shape-divider-top-1777042046 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1777042046 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1777042046 .shape-fill {
+  fill: #FFFFFF;
+}

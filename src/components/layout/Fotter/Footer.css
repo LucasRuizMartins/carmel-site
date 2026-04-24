@@ -1,0 +1,53 @@
+/* Footer Component Styles */
+
+.footer {
+  @apply bg-navy text-white pt-16 pb-8;
+}
+
+.footer-inner {
+  @apply max-w-[1400px] mx-auto px-6;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-10 mb-12;
+}
+
+.footer-logo {
+  @apply h-10 object-contain mb-4;
+}
+
+.footer-nav-title {
+  @apply text-gold font-semibold text-sm uppercase tracking-widest mb-4;
+}
+
+.footer-nav-list {
+  @apply space-y-2;
+}
+
+.footer-nav-link {
+  @apply text-white/70 text-sm hover:text-gold transition-colors;
+}
+
+.footer-address-link {
+  @apply text-white/70 text-sm hover:text-gold transition-colors leading-relaxed block;
+}
+
+.footer-seals {
+  @apply flex gap-4 items-center mb-8;
+}
+
+.footer-seal-img {
+  @apply h-12 object-contain;
+}
+
+.footer-bottom {
+  @apply border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4;
+}
+
+.footer-copyright {
+  @apply text-white/50 text-xs;
+}
+
+.footer-privacy-link {
+  @apply text-white/50 text-xs hover:text-gold transition-colors;
+}

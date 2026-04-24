@@ -1,0 +1,82 @@
+/* Funds Component Styles */
+
+.funds-section {
+  @apply bg-light-gray py-24;
+}
+
+.funds-container {
+  @apply max-w-[1400px] mx-auto px-6;
+}
+
+.funds-list {
+  @apply space-y-3;
+}
+
+.funds-footer {
+  @apply text-center mt-8;
+}
+
+.funds-more-link {
+  @apply inline-block text-gold text-sm font-semibold border-b border-gold pb-0.5 hover:text-gold-dark transition-colors;
+}
+
+/* Fund Card */
+.fund-card {
+  @apply border border-gray-200 bg-white shadow-sm;
+}
+
+.fund-card-header {
+  @apply w-full flex items-center justify-between px-6 py-5 text-left hover:bg-light-gray transition-colors;
+}
+
+.fund-card-name {
+  @apply text-navy font-bold text-sm md:text-base;
+}
+
+.fund-card-cnpj {
+  @apply text-gray-400 text-xs mt-1;
+}
+
+.fund-card-toggle {
+  @apply text-gold text-2xl font-thin transition-transform duration-300;
+}
+
+.fund-card-body {
+  @apply px-6 pb-6 border-t border-gray-100;
+}
+
+.fund-section-label {
+  @apply text-gold text-xs font-bold uppercase tracking-widest mt-5 mb-3;
+}
+
+.fund-section-label--top {
+  @apply mt-6 mb-2;
+}
+
+.fund-info-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-8;
+}
+
+.fund-info-row {
+  @apply flex justify-between border-b border-gray-100 py-2;
+}
+
+.fund-info-key {
+  @apply text-gray-500 text-xs;
+}
+
+.fund-info-value {
+  @apply text-navy text-xs font-medium text-right max-w-[55%];
+}
+
+.fund-objective-text {
+  @apply text-gray-600 text-sm leading-relaxed;
+}
+
+.fund-docs-list {
+  @apply flex flex-wrap gap-3;
+}
+
+.fund-doc-link {
+  @apply text-xs border border-navy text-navy px-3 py-1.5 hover:bg-navy hover:text-white transition-colors;
+}

@@ -1,0 +1,40 @@
+/* HeroSlider Component Styles */
+
+.hero-section {
+  /* Escondido por padrão, flex ou block a partir do md (768px) */
+  @apply hidden md:relative md:block w-full h-screen overflow-hidden;
+}
+
+.hero-slide {
+  @apply absolute inset-0 transition-opacity duration-1000;
+}
+
+.hero-slide-img {
+  /* O segredo da responsividade é o object-cover + enquadramento */
+  @apply w-full h-full object-cover object-center;
+}
+
+/* Ajuste nos Dots para Mobile */
+.hero-dots-wrapper {
+  /* No mobile, talvez os pontos fiquem melhor embaixo ou bem pequenos na lateral */
+  @apply absolute inset-y-0 left-2 md:left-8 z-10 pointer-events-none flex items-center;
+}
+
+.hero-dot-btn {
+  /* Botões menores no mobile para não poluir a imagem */
+  @apply flex items-center justify-center rounded-full transition-all duration-300 w-8 h-8 md:w-12 md:h-12;
+}
+
+.hero-dot-inner {
+  @apply rounded-full transition-all duration-300 w-2 h-2 md:w-3.5 md:h-3.5;
+}
+
+
+/* Book Effect Transition */
+.hero-book-effect {
+  @apply absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none;
+}
+
+.hero-book-svg {
+  @apply w-full h-16 md:h-32 text-light-gray;
+}

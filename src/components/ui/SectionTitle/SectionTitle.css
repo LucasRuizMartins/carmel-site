@@ -1,0 +1,16 @@
+/* SectionTitle Component Styles */
+
+.section-title-wrapper {
+  /* Alignment variant applied via JS: text-center */
+}
+
+.section-title-heading {
+  @apply text-5xl font-bold leading-tight;
+  /* Color classes (primary-h1 / text-white / text-navy) applied directly in JSX */
+}
+
+.section-title-subtitle {
+  @apply mt-4 text-base leading-relaxed;
+}
+
+/* Color variant applied via JS: text-white/80 / text-gray-500 */

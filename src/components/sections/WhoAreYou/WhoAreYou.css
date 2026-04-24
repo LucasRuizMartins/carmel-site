@@ -1,0 +1,79 @@
+/* WhoAreYou Component Styles */
+
+.who-section {
+  @apply bg-light-gray py-24;
+}
+
+.who-container {
+  @apply max-w-[1600px] mx-auto px-6 xl:px-12;
+}
+
+.who-title-wrapper {
+  @apply flex items-stretch justify-center gap-4 mb-12;
+}
+
+.who-description {
+  @apply text-gray-600 text-base leading-relaxed max-w-2xl mb-12;
+}
+
+.who-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.profile-card {
+  @apply min-h-[900px] lg:min-h-[600px];
+  @apply flex flex-col lg:flex-row items-center gap-5 lg:gap-10 bg-white p-6 lg:p-5 w-full max-w-6xl border border-[#179D6A] rounded-[40px] lg:rounded-[160px] text-center lg:text-left;
+}
+
+.profile-card-img-wrapper {
+  @apply flex-shrink-0 w-full lg:w-auto flex justify-center;
+}
+
+.profile-card-img {
+  /* CELULAR (Mobile First) */
+  /* Troque o w-full ou o max-w para o tamanho que desejar no celular */
+  @apply w-[90%] max-w-[700px] h-[800px] mx-auto;
+  /* TABLET (md) */
+  /* Adicione o prefixo md: para mudar apenas em tablets */
+  @apply md:w-[700px] md:h-[800px];
+  /* DESKTOP (lg) */
+  @apply lg:w-[240px] lg:h-[600px] lg:max-w-none;
+
+  /* Estilos Comuns */
+  @apply object-cover rounded-[20px] lg:rounded-[180px];
+}
+
+.profile-card-body {
+  @apply flex-1 flex flex-col items-center lg:items-start justify-center py-4;
+}
+
+.profile-card-title-wrapper {
+  @apply flex items-center justify-center lg:justify-start gap-3 mb-6 w-full;
+}
+
+.profile-card-title {
+  @apply text-3xl lg:text-4xl font-bold m-0;
+}
+
+.profile-card-text {
+  /* text-lg no mobile, volta para text-base no desktop (ou mantenha lg:text-lg) */
+  @apply p-10;
+  @apply text-gray-500 text-[20px] lg:text-base leading-relaxed mb-10 line-clamp-6;
+}
+
+.profile-card-actions {
+  /* container for button */
+}
+
+.profile-card-btn {
+  @apply !rounded-tl-none !rounded-tr-full !rounded-br-full !rounded-bl-full;
+  @apply min-h-[80px] lg:min-h-[80px];
+  @apply min-w-[200px] lg:min-w-[200px];
+  @apply !border-[#179D6A] !text-[#179D6A] !normal-case tracking-normal px-12 py-5;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.profile-card-btn:hover {
+  @apply !bg-[#179D6A] !text-white;
+}

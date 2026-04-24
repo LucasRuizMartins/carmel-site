@@ -1,0 +1,37 @@
+/* ScheduleModal Component Styles */
+
+.schedule-modal-img {
+  @apply w-full h-32 object-cover mb-6;
+}
+
+.schedule-modal-type-toggle {
+  @apply flex mb-6;
+}
+
+.schedule-modal-type-btn {
+  @apply flex-1 py-2.5 text-sm font-semibold border transition-colors;
+}
+
+.schedule-modal-type-btn--inactive {
+  @apply bg-white text-navy border-gray-200 hover:border-navy;
+}
+
+.schedule-modal-type-btn--active {
+  @apply bg-navy text-white border-navy;
+}
+
+.schedule-modal-inputs {
+  @apply space-y-4;
+}
+
+.schedule-modal-input {
+  @apply w-full border border-gray-200 px-4 py-3 text-sm text-navy focus:outline-none focus:border-gold transition-colors;
+}
+
+.schedule-modal-textarea {
+  @apply resize-none;
+}
+
+.schedule-modal-submit {
+  @apply w-full mt-6;
+}

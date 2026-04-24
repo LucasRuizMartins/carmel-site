@@ -1,0 +1,25 @@
+/* Modal Component Styles */
+
+.modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4;
+}
+
+.modal-box {
+  @apply relative bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl;
+}
+
+.modal-close {
+  @apply absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl leading-none z-10;
+}
+
+.modal-header {
+  @apply bg-navy px-8 py-6;
+}
+
+.modal-header-title {
+  @apply text-white text-xl font-semibold;
+}
+
+.modal-body {
+  @apply p-8;
+}

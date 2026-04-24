@@ -1,0 +1,38 @@
+/* Metrics Component Styles */
+
+.metrics-section {
+  @apply bg-navy py-20;
+}
+
+.metrics-container {
+  @apply max-w-[1400px] mx-auto px-6;
+}
+
+.metrics-intro {
+  @apply text-white text-center text-xl md:text-2xl font-semibold mb-12 leading-relaxed max-w-2xl mx-auto;
+}
+
+.metrics-heading {
+  @apply text-gold text-center text-2xl font-bold uppercase tracking-widest mb-10;
+}
+
+.metrics-subtitle {
+  @apply text-white/70 text-center text-sm mb-12;
+}
+
+.metrics-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6;
+}
+
+/* Metric Card */
+.metric-card {
+  @apply text-center p-6 border-r border-white/20 last:border-r-0;
+}
+
+.metric-value {
+  @apply text-gold text-3xl md:text-4xl font-bold mb-2;
+}
+
+.metric-label {
+  @apply text-white/80 text-sm uppercase tracking-wider;
+}

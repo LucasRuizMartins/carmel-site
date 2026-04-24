@@ -1,0 +1,56 @@
+/* Header Component Styles */
+
+.header {
+  @apply fixed top-0 left-0 right-0 z-40 transition-all duration-300;
+}
+
+.header--default {
+  @apply bg-transparent py-4;
+}
+
+.header--scrolled {
+  @apply bg-navy shadow-lg py-2;
+}
+
+.header-inner {
+  @apply max-w-[1400px] mx-auto px-6 flex items-center justify-between;
+}
+
+.header-logo {
+  @apply h-10 object-contain;
+}
+
+/* Desktop Nav */
+.header-nav {
+  @apply hidden lg:flex items-center gap-6;
+}
+
+.header-nav-link {
+  @apply text-white text-sm font-medium tracking-wide hover:text-gold transition-colors duration-200;
+}
+
+/* Mobile Hamburger */
+.header-hamburger {
+  @apply lg:hidden text-white p-2;
+}
+
+.header-hamburger-line {
+  @apply block w-6 h-0.5 bg-white mb-1;
+}
+
+.header-hamburger-line--last {
+  @apply block w-6 h-0.5 bg-white;
+}
+
+/* Mobile Menu */
+.header-mobile-menu {
+  @apply lg:hidden bg-navy border-t border-white/10;
+}
+
+.header-mobile-nav {
+  @apply flex flex-col px-6 py-4 gap-4;
+}
+
+.header-mobile-link {
+  @apply text-white text-sm font-medium hover:text-gold transition-colors;
+}

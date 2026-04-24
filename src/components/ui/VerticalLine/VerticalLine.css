@@ -1,0 +1,5 @@
+/* VerticalLine Component Styles */
+
+.vertical-line {
+  @apply w-2.5 bg-[#179D6A] rounded-full flex-shrink-0;
+}
