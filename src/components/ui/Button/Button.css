@@ -1,10 +1,8 @@
-/* Button Component Styles */
-
 .btn {
   @apply inline-flex items-center justify-center font-semibold tracking-wider uppercase transition-all duration-300 cursor-pointer;
 }
 
-/* Variants */
+/* Variantes existentes */
 .btn--primary {
   @apply bg-gold text-white hover:bg-gold-dark border border-gold;
 }
@@ -17,7 +15,20 @@
   @apply bg-transparent text-white border border-white hover:bg-white hover:text-navy;
 }
 
-/* Sizes */
+/* Variantes NOVAS (Com o Arco) */
+.btn--green-outline {
+  @apply border-2 border-[#179D6A] text-[#179D6A] bg-transparent normal-case;
+  @apply rounded-tr-[40px] rounded-br-[40px] rounded-bl-[40px] rounded-tl-none;
+  @apply hover:bg-[#179D6A] hover:text-white;
+}
+
+.btn--green-inverted {
+  @apply border-2 border-[#179D6A] bg-[#179D6A] text-white normal-case;
+  @apply rounded-tr-[40px] rounded-br-[40px] rounded-bl-[40px] rounded-tl-none;
+  @apply hover:bg-transparent hover:text-[#179D6A];
+}
+
+/* Tamanhos */
 .btn--sm {
   @apply px-4 py-2 text-xs;
 }

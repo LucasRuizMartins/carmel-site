@@ -1,0 +1,31 @@
+.docs-section {
+    @apply py-20 flex justify-center bg-white;
+}
+
+.docs-container {
+    @apply max-w-[1400px] mx-auto px-6 xl:px-12 w-full flex flex-col md:flex-row items-center gap-12;
+}
+
+.docs-image-wrapper {
+    @apply flex-shrink-0 w-full md:w-1/2;
+}
+
+.docs-image {
+    @apply w-full h-auto object-cover rounded-2xl;
+}
+
+.docs-content {
+    @apply flex flex-col items-start gap-6 w-full md:w-1/2;
+}
+
+.docs-title {
+    @apply text-3xl md:text-4xl font-bold text-navy;
+}
+
+.docs-description {
+    @apply text-gray-500 text-base leading-relaxed;
+}
+
+.docs-buttons {
+    @apply flex flex-wrap gap-4;
+}

@@ -1,5 +1,7 @@
 /* VerticalLine Component Styles */
-
 .vertical-line {
-  @apply w-2.5 bg-[#179D6A] rounded-full flex-shrink-0;
+  @apply w-3 h-10 bg-[#179D6A] rounded-full flex-shrink-0;
+  @apply lg:h-24;
+
+  /* Adiciona margin-left: auto e margin-right: auto */
 }

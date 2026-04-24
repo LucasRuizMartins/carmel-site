@@ -21,7 +21,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleClic
               Estamos prontos para entender seu ambiente de negócios e criar uma estratégia para
               potencializar a gestão financeira da sua empresa. Vamos conversar!
             </p>
-            <Button variant="ghost" size="lg" onClick={onScheduleClick}>
+            <Button variant="green-inverted" size="lg" onClick={onScheduleClick}>
               Agende uma conversa
             </Button>
           </div>

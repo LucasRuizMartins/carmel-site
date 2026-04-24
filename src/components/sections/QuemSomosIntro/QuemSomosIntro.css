@@ -1,0 +1,78 @@
+/* CONTAINER GERAL DA SEÇÃO */
+.quem-somos-intro-section {
+  @apply w-full overflow-hidden flex flex-col bg-light-gray pb-24;
+}
+
+/* 1. BANNER SUPERIOR */
+.quem-somos-intro-container-top-banner {
+  /* Gradiente e imagem de fundo (como já havíamos definido) */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%, transparent 100%),
+    url('https://carmelcapital.com.br/imagens/sobre/banner-sem-gradient.png');
+  background-size: cover;
+  background-position: center;
+
+  @apply min-h-[300px] lg:min-h-[350px] w-full flex flex-col justify-center px-6 md:px-12 lg:px-24 py-16;
+}
+
+.quem-somos-intro-title-wrapper {
+  @apply flex items-center justify-start gap-4 mb-4;
+}
+
+/* Título Branco do Banner */
+.quem-somos-intro-title-wrapper h2 {
+  @apply !text-white !text-3xl lg:text-5xl font-bold;
+}
+
+.quem-somos-intro-description-banner {
+  @apply text-white text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl text-left;
+}
+
+
+/* 2. NOVO CONTEÚDO (GRID) */
+.quem-somos-content-wrapper {
+  /* No mobile empilha, no desktop grid de 2 colunas */
+  @apply w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-start;
+  @apply mt-10 lg:-mt-24;
+  /* O segredo: No desktop, o conteúdo sobe para sobrepor o banner */
+  @apply px-5 md:px-12 lg:px-0;
+  /* Tira padding lateral no desktop para a imagem colar na direita */
+}
+
+/* COLUNA DA ESQUERDA (TEXTO) */
+.quem-somos-text-column {
+  @apply flex flex-col justify-start py-12 lg:py-24 lg:pl-24 lg:pr-12;
+}
+
+.quem-somos-main-title-wrapper {
+  @apply flex items-start justify-start gap-4 mb-10 w-full;
+}
+
+.quem-somos-main-title {
+  /* Título grande, verde escuro (navy), com quebra de linha */
+  @apply text-5xl lg:text-4xl py-10 font-bold m-0 text-navy leading-[0.95];
+}
+
+.quem-somos-profile-description {
+  /* Texto cinza, tamanho menor que o do banner superior, max-w para não esticar muito */
+  @apply text-gray-500 text-base md:text-lg leading-relaxed max-w-xl text-left;
+}
+
+
+/* COLUNA DA DIREITA (IMAGEM) */
+.quem-somos-image-column {
+  @apply w-full h-full flex justify-end lg:justify-start;
+}
+
+.quem-somos-image-arco-container {
+  /* Substitua o h-full por valores específicos */
+  @apply h-[700px] lg:h-[900px];
+
+  @apply w-full max-w-[90vw] lg:max-w-none lg:w-full;
+  @apply rounded-t-[50px] lg:rounded-tl-[200px] lg:rounded-bl-[50px] lg:rounded-tr-none lg:rounded-br-none;
+  @apply overflow-hidden shadow-2xl;
+}
+
+.quem-somos-image-arco {
+  /* A imagem preenche o container do arco */
+  @apply w-full h-[500px] lg:h-full object-cover;
+}

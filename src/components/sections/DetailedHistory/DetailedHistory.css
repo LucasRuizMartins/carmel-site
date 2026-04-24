@@ -1,0 +1,45 @@
+.detailed-history-section {
+  @apply bg-light-gray py-24;
+}
+
+.detailed-history-container {
+  @apply max-w-[1000px] mx-auto px-6 xl:px-12 flex flex-col items-center;
+}
+
+.detailed-history-title-wrapper {
+  @apply flex items-center justify-center gap-4 mb-8 w-full;
+}
+
+.detailed-history-intro {
+  @apply text-gray-600 text-base lg:text-xl leading-relaxed max-w-4xl text-center mb-16;
+}
+
+.history-timeline {
+  @apply relative w-full border-l-4 border-[#179D6A] pl-8 md:pl-12 space-y-12 ml-4 md:ml-0;
+}
+
+.timeline-item {
+  @apply relative w-full;
+}
+
+.timeline-dot {
+  @apply absolute -left-[42px] md:-left-[58px] top-1 w-6 h-6 rounded-full bg-[#179D6A] border-4 border-light-gray;
+}
+
+.timeline-content {
+  @apply bg-white p-8 rounded-3xl shadow-sm border border-gray-100;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-year {
+  @apply text-2xl font-bold text-[#179D6A] mb-4;
+}
+
+.timeline-text {
+  @apply text-gray-600 text-base lg:text-lg leading-relaxed;
+}

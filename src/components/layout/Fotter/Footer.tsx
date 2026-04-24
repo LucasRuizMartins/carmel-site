@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FOOTER_NAV, BASE_URL } from '../../../constants';
 import './Footer.css';
 
@@ -9,9 +10,9 @@ export const Footer: React.FC = () => {
         <div className="footer-grid">
           {/* Logo */}
           <div className="col-span-1">
-            <a href="/home">
+            <Link to="/home">
               <img src={`${BASE_URL}/imagens/header/logo-footer.png`} alt="Carmel Capital" className="footer-logo" />
-            </a>
+            </Link>
           </div>
 
           {/* Mapa do site */}
@@ -20,7 +21,7 @@ export const Footer: React.FC = () => {
             <ul className="footer-nav-list">
               {FOOTER_NAV.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="footer-nav-link">{item.label}</a>
+                  <Link to={item.href} className="footer-nav-link">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -65,9 +66,9 @@ export const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">© 2023 Carmel Capital - Todos os direitos reservados</p>
-          <a href="/documentos-regulatorios" className="footer-privacy-link">
+          <Link to="/documentos-regulatorios" className="footer-privacy-link">
             Política de Privacidade &amp; Cookies
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

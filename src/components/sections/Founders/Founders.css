@@ -1,0 +1,43 @@
+.founders-section {
+  @apply py-20 flex flex-col items-center;
+  background-color: #0d1b2a;
+  /* navy escuro igual ao site */
+}
+
+.founders-container {
+  @apply max-w-[1400px] mx-auto px-6 xl:px-12 w-full flex flex-col items-center;
+}
+
+.founders-title-wrapper {
+  @apply flex items-center justify-center gap-4 mb-16 w-full;
+}
+
+/* 3 colunas lado a lado em desktop, 1 coluna em mobile */
+.founders-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-10 w-full;
+}
+
+.founder-card {
+  @apply flex flex-col items-center text-center;
+}
+
+/* Foto grande, quadrada com leve arredondamento, ocupa toda a largura do card */
+.founder-img-wrapper {
+  @apply w-full aspect-square overflow-hidden rounded-2xl mb-6;
+}
+
+.founder-img {
+  @apply w-full h-full object-cover object-top;
+}
+
+.founder-body {
+  @apply flex flex-col items-center;
+}
+
+.founder-name {
+  @apply text-xl font-bold text-white mb-3;
+}
+
+.founder-bio {
+  @apply text-sm text-gray-300 leading-relaxed text-left;
+}

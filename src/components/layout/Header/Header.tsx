@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { NAV_ITEMS, BASE_URL } from '../../../constants';
 import { Button } from '../../ui/Button/Button';
 import './Header.css';
@@ -12,7 +13,8 @@ export const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Detect current page for active state
-  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -32,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
     <>
       <header className={`header ${scrolled ? 'header--scrolled' : 'header--default'}`}>
         <div className="header-inner">
-          <a href="/home">
+          <Link to="/home">
             <img
               src={scrolled
                 ? `${BASE_URL}/imagens/header/logo-branco.png`
@@ -40,18 +42,18 @@ export const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
               alt="Carmel Capital"
               className="header-logo"
             />
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="header-nav">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className={`header-nav-link ${currentPath === item.href ? 'header-nav-link--active' : ''}`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button variant="outline" size="sm" onClick={onScheduleClick}>
               Agendar conversa
@@ -98,14 +100,14 @@ export const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
 
         <nav className="header-sidebar-nav">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               className={`header-sidebar-link ${currentPath === item.href ? 'header-sidebar-link--active' : ''}`}
               onClick={closeMenu}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

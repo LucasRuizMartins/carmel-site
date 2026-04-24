@@ -1,0 +1,27 @@
+.investor-cta-section {
+    @apply bg-white py-20 flex justify-center;
+}
+
+.investor-cta-container {
+    @apply max-w-[1400px] mx-auto px-6 xl:px-12 w-full flex flex-col md:flex-row items-center gap-12;
+}
+
+.investor-cta-image-wrapper {
+    @apply w-full md:w-1/2 flex-shrink-0;
+}
+
+.investor-cta-image {
+    @apply w-full h-auto object-cover rounded-2xl;
+}
+
+.investor-cta-content {
+    @apply flex flex-col items-start gap-6 w-full md:w-1/2;
+}
+
+.investor-cta-title {
+    @apply text-3xl md:text-4xl font-bold text-navy leading-tight;
+}
+
+.investor-cta-description {
+    @apply text-gray-500 text-base leading-relaxed;
+}
