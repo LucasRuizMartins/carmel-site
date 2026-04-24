@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../../ui/Button/Button';
-import './Governance.css';
+import './governance.css';
 
 export const Governance: React.FC = () => {
     return (
